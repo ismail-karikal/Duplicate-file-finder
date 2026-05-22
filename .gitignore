@@ -1,0 +1,46 @@
+# Executables
+duplicate_finder
+duplicate-finder-daemon
+duplicate-finder-client
+
+# Object files and compiled files
+*.o
+*.a
+*.so
+
+# Debug symbols
+*.dSYM/
+*.su
+*.gch
+*.pch
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+tags
+
+# Build artifacts
+build/
+dist/
+*.tar.gz
+*.zip
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Cache
+.cache/
+
+# System files
+*.pid
+*.lock

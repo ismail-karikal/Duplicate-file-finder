@@ -1,0 +1,23 @@
+[Unit]
+Description=Duplicate File Finder - Background Scanning Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/duplicate-finder-daemon
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+# Resource limits (optional, uncomment to enable)
+# CPUQuota=50%
+# MemoryLimit=500M
+
+[Install]
+WantedBy=multi-user.target
