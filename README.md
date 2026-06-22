@@ -38,12 +38,6 @@ make clean
 make
 ```
 
-**Option B: Using Build Script**
-```bash
-chmod +x build.sh
-./build.sh
-```
-
 After successful build, you'll have three executables:
 - `./duplicate_finder` - Standalone scanner
 - `./duplicate-finder-daemon` - Background service
@@ -129,7 +123,6 @@ sudo make uninstall-service
 - **daemon.c** - Background service with daemonization and Unix socket server
 - **client.c** - CLI interface for user interaction
 - **Makefile** - Automated compilation and installation
-- **build.sh** - Shell script alternative build method
 - **duplicate-finder.service** - systemd service definition
 
 ---
