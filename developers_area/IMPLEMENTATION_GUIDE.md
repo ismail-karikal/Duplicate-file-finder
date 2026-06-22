@@ -7,7 +7,6 @@ This is a complete C-based solution for finding duplicate files and folders. It 
 1. **duplicate_finder.c** - Main scanning engine
 2. **daemon.c** - Background service that runs continuously
 3. **client.c** - CLI to communicate with the daemon
-4. **build.sh** - Build script
 
 ---
 
@@ -70,13 +69,10 @@ pkg-config --cflags --libs openssl
 
 ## Building the Project
 
-### Method 1: Using Build Script (Recommended)
+### Using Makefile (Recommended)
 ```bash
-# Make script executable
-chmod +x build.sh
-
-# Run build
-./build.sh
+make clean
+make
 
 # Result: Creates three executables
 # - duplicate_finder      (main scanner)
@@ -84,7 +80,7 @@ chmod +x build.sh
 # - duplicate-finder-client  (user interface)
 ```
 
-### Method 2: Manual Compilation
+### Alternative: Manual Compilation
 ```bash
 # Build main scanner
 gcc -o duplicate_finder duplicate_finder.c \
@@ -337,27 +333,6 @@ Client Request          Daemon Response
 "GET_RESULTS"   →       [file contents]
 "START_SCAN"    →       "SCAN_STARTED"
 ```
-
----
-
-## Performance Metrics
-
-### Expected Performance
-
-| Operation | Time | Notes |
-|-----------|------|-------|
-| Scanning 100GB | 15-30 min | Depends on number of files |
-| Hashing files | 70% of time | Main bottleneck |
-| Duplicate detection | Fast | After hashing complete |
-| Incremental scan | 2-5 min | Only changed files |
-
-### System Requirements
-
-| Resource | Minimum | Recommended |
-|----------|---------|-------------|
-| CPU Cores | 2 | 4+ |
-| RAM | 512 MB | 2+ GB |
-| Disk Space | 100 MB | 500 MB for cache |
 
 ---
 
