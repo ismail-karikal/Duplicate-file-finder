@@ -340,27 +340,6 @@ Client Request          Daemon Response
 
 ---
 
-## Performance Metrics
-
-### Expected Performance
-
-| Operation | Time | Notes |
-|-----------|------|-------|
-| Scanning 100GB | 15-30 min | Depends on number of files |
-| Hashing files | 70% of time | Main bottleneck |
-| Duplicate detection | Fast | After hashing complete |
-| Incremental scan | 2-5 min | Only changed files |
-
-### System Requirements
-
-| Resource | Minimum | Recommended |
-|----------|---------|-------------|
-| CPU Cores | 2 | 4+ |
-| RAM | 512 MB | 2+ GB |
-| Disk Space | 100 MB | 500 MB for cache |
-
----
-
 ## Troubleshooting
 
 ### Build Errors
