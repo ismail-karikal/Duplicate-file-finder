@@ -154,5 +154,6 @@ For detailed technical information about the system architecture, components, an
 - **[SYSTEM_ARCHITECTURE.md](developers_area/SYSTEM_ARCHITECTURE.md)** - Complete architectural overview, component details, data flow, IPC protocol, and extensibility
 - **[IMPLEMENTATION_GUIDE.md](developers_area/IMPLEMENTATION_GUIDE.md)** - Build, setup, configuration, and advanced customization
 - **[QUICK_REFERENCE.md](developers_area/QUICK_REFERENCE.md)** - Quick commands and debugging reference
+- **[BRANCHING_STRATEGY.md](developers_area/BRANCHING_STRATEGY.md)** - To know branching strategy and releases.
 
 ---
